@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RootController">
+   <children>
+      <VBox id="room1" prefHeight="500.0" prefWidth="300.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="300.0" text="Room 1">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="50.0" prefWidth="280.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="130.0" text="current temperature">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="130.0" text="desire temperature">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="lb_room1_current" alignment="CENTER" prefHeight="50.0" prefWidth="150.0" />
+                  <Label fx:id="lb_room1_desire" alignment="CENTER" prefHeight="50.0" prefWidth="150.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Slider fx:id="sld_room1" max="30.0" min="-30.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Slider>
+            <Separator prefWidth="200.0" />
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="300.0" text="제품명">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="50.0" prefWidth="280.0">
+               <children>
+                  <Button fx:id="btn_room1_modify" alignment="CENTER" mnemonicParsing="false" onAction="#ModifyProductOnAction" onMouseClicked="#handleTextInput" prefHeight="50.0" prefWidth="50.0" text="수정">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="lb_room1_product_name" alignment="CENTER" prefHeight="50.0" prefWidth="230.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="280.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="100.0" text="현재 수량">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lb_room1_product_amount" alignment="CENTER" prefHeight="50.0" prefWidth="170.0">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="30.0" prefWidth="280.0">
+               <children>
+                  <Button fx:id="btn_room1_in" mnemonicParsing="false" onAction="#StockAmountManagerOnAction" prefHeight="30.0" prefWidth="50.0" text="입고">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="tf_room1_in" prefHeight="30.0" prefWidth="220.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="280.0">
+               <children>
+                  <Button fx:id="btn_room1_out" mnemonicParsing="false" onAction="#StockAmountManagerOnAction" prefHeight="30.0" prefWidth="50.0" text="출고">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="tf_room1_out" prefHeight="30.0" prefWidth="220.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+      </VBox>
+      <VBox id="room2" prefHeight="500.0" prefWidth="300.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="300.0" text="Room 2">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="130.0" text="current temperature">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="130.0" text="desire temperature">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="lb_room2_current" alignment="CENTER" prefHeight="50.0" prefWidth="150.0" />
+                  <Label fx:id="lb_room2_desire" alignment="CENTER" prefHeight="50.0" prefWidth="150.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Slider fx:id="sld_room2" max="30.0" min="-30.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Slider>
+            <Separator prefWidth="200.0" />
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="300.0" text="제품명">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="50.0" prefWidth="280.0">
+               <children>
+                  <Button fx:id="btn_room2_modify" alignment="CENTER" mnemonicParsing="false" onAction="#ModifyProductOnAction" prefHeight="50.0" prefWidth="50.0" text="수정">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="lb_room2_product_name" alignment="CENTER" prefHeight="50.0" prefWidth="230.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="280.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="100.0" text="현재 수량">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lb_room2_product_amount" alignment="CENTER" prefHeight="50.0" prefWidth="170.0">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="30.0" prefWidth="280.0">
+               <children>
+                  <Button fx:id="btn_room2_in" mnemonicParsing="false" onAction="#StockAmountManagerOnAction" prefHeight="50.0" prefWidth="50.0" text="입고">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="tf_room2_in" prefHeight="50.0" prefWidth="220.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="280.0">
+               <children>
+                  <Button fx:id="btn_room2_out" mnemonicParsing="false" onAction="#StockAmountManagerOnAction" prefHeight="50.0" prefWidth="50.0" text="출고">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="tf_room2_out" prefHeight="50.0" prefWidth="220.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+      </VBox>
+      <VBox id="room3" prefHeight="500.0" prefWidth="300.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="300.0" text="Room 3">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="130.0" text="current temperature">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="130.0" text="desire temperature">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="lb_room3_current" alignment="CENTER" prefHeight="50.0" prefWidth="150.0" />
+                  <Label fx:id="lb_room3_desire" alignment="CENTER" prefHeight="50.0" prefWidth="150.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Slider fx:id="sld_room3" max="30.0" min="-30.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Slider>
+            <Separator prefWidth="200.0" />
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="300.0" text="제품명">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="50.0" prefWidth="280.0">
+               <children>
+                  <Button fx:id="btn_room3_modify" alignment="CENTER" mnemonicParsing="false" onAction="#ModifyProductOnAction" prefHeight="50.0" prefWidth="50.0" text="수정">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="lb_room3_product_name" alignment="CENTER" prefHeight="50.0" prefWidth="230.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="280.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="100.0" text="현재 수량">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lb_room3_product_amount" alignment="CENTER" prefHeight="50.0" prefWidth="170.0">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="30.0" prefWidth="280.0">
+               <children>
+                  <Button fx:id="btn_room3_in" mnemonicParsing="false" onAction="#StockAmountManagerOnAction" prefHeight="50.0" prefWidth="50.0" text="입고">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="tf_room3_in" prefHeight="50.0" prefWidth="220.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="280.0">
+               <children>
+                  <Button fx:id="btn_room3_out" mnemonicParsing="false" onAction="#StockAmountManagerOnAction" prefHeight="50.0" prefWidth="50.0" text="출고">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="tf_room3_out" prefHeight="50.0" prefWidth="220.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+      </VBox>
+   </children>
+</HBox>
